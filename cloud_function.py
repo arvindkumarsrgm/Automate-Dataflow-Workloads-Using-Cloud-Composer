@@ -10,10 +10,10 @@ def trigger_df_job(cloud_event,environment):
     template_body = {
         "jobName": "load-cric-data-to-bq-from-gcs",  # Provide a unique name for the job
         "parameters": {
-        "inputFilePattern": "gs://crci-api-project-bkt/*.csv",
-        "JSONPath": "gs://crci-api-project-bkt-metadata/schema.json",
+        "inputFilePattern": "gs://crci-api-project-bkt-arvind/*.csv",
+        "JSONPath": "gs://crci-api-project-bkt-metadata-arvind/schema.json",
         "outputTable": "bold-landing-432711-u5:cricket_dataset.icc_test_player_ranking",
-        "bigQueryLoadingTemporaryDirectory": "gs://crci-api-project-bkt-metadata",
+        "bigQueryLoadingTemporaryDirectory": "gs://crci-api-project-bkt-metadata-arvind",
         "javascriptTextTransformGcsPath": "gs://crci-api-project-bkt-metadata/transform.js",
         "javascriptTextTransformFunctionName": "transform"
     }
